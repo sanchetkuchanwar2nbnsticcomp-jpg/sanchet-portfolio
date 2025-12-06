@@ -1,22 +1,101 @@
-<<<<<<< HEAD
-# React + Vite
+# 🌐 Sanchet's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio — a showcase of my projects, skills, and experience as a **Full-Stack Developer** specializing in:
 
-Currently, two official plugins are available:
+- Java & Spring Boot  
+- React.js  
+- SQL  
+- REST APIs  
+- Cloud Deployment  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio is responsive, animated, and fully theme-supported (Light/Dark Mode). It works on desktop, tablet, and mobile devices.
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🚀 Live Website
 
-Note: This will impact Vite dev & build performances.
+🔗 **Hosted URL:**  
+-  sanchet.netlify.app
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# sanchet-portfolio
->>>>>>> ec144e84fa0b633edacaaa6da0c21c4afe43becf
+- 🎨 Modern UI with smooth transitions
+- 🌙 Light / Dark theme toggle (stored in local storage)
+- 📱 Fully responsive for mobile & tablet
+- 🧩 Section-based navigation (Hero, About, Skills, Projects, Contact)
+- 📩 Working contact form using **EmailJS**
+- 🎬 Animations using **AOS & Framer Motion**
+- 🌫️ Particle background effects
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---------|-------------|
+| **Frontend** | React.js, Vite |
+| **Styling** | CSS3, Custom Styling, Responsive Layout |
+| **Animations** | Framer Motion, AOS, Typewriter Effect |
+| **Utilities** | React Icons, EmailJS |
+| **Version Control** | Git & GitHub |
+| **Hosting** | Netlify |
+
+---
+
+## 📂 Folder Structure
+
+📦 portfolio
+┣ 📂 public
+┣ 📂 src
+┃ ┣ 📂 assets
+┃ ┣ 📂 components
+┃ ┣ 📂 context
+┃ ┣ 📂 styles
+┃ ┗ App.jsx
+┣ .gitignore
+┣ package.json
+┣ README.md
+
+
+---
+
+## 🧪 Run Locally
+
+**```sh
+# Clone repository
+git clone https://github.com/<your-username>/<repo-name>.git
+
+# Navigate into project
+cd <repo-name>
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+🌍 Deployment Guide (Netlify)
+
+This project is hosted on Netlify.
+
+Steps:
+
+1. Run the production build:
+npm run build
+2. Upload the dist folder to Netlify or connect your GitHub repo.
+3. If errors appear, set build command and output folder:
+4. Deploy and wait for the live link.
+
+📨 Contact Form Setup (EmailJS)
+
+1. Create an account at: https://www.emailjs.com
+2. Create a service → template → public key
+3. Add the credentials in Contact.jsx:
+emailjs.send(
+  "SERVICE_ID",
+  "TEMPLATE_ID",
+  formData,
+  "PUBLIC_KEY"
+);
+**
