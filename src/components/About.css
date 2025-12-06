@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/light2.jpg");
+  background-image: url("../assets/light1.jpg");
 }
 
 /* Theme Backgrounds */
@@ -21,7 +21,7 @@
 }
 
 .about-container.light {
-  background-image: url("../assets/light2.jpg");
+  background-image: url("../assets/light1.jpg");
 }
 
 /* ================================

@@ -12,7 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.4s ease-in-out;
-  background-image: url("../assets/light2.jpg");
+  background-image: url("../assets/light1.jpg");
 }
 
 .skills-container.dark {
