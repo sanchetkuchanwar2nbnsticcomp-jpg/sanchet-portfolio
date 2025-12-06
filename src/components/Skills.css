@@ -1,0 +1,141 @@
+/* ================================
+   Skills Fullscreen Section
+================================ */
+.skills-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;  /* Removed extra padding causing top gap */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s ease-in-out;
+  background-image: url("../assets/light2.jpg");
+}
+
+.skills-container.dark {
+  background-image: url("../assets/black2.jpg");
+}
+
+/* ================================
+   Glass Card
+================================ */
+.skills-card {
+  width: 95%;
+  max-width: 1100px;
+  padding: 50px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 40px rgba(0,0,0,0.45);
+  animation: fadeUp 0.9s ease forwards;
+  opacity: 0;
+}
+
+.skills-container.light .skills-card {
+  background: rgba(255,255,255,0.45);
+}
+
+/* ================================
+   Title
+================================ */
+.skills-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #2e8bff;
+  margin-bottom: 35px;
+}
+
+/* Section Title */
+.category-title {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2e8bff;
+  text-align: center;
+}
+
+/* ================================
+   Skills Grid Layout
+================================ */
+.skills-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+/* ================================
+   Skill Chip
+================================ */
+.skill-chip {
+  padding: 12px 18px;
+  background: rgba(46,139,255,0.15);
+  border: 1px solid rgba(46,139,255,0.35);
+  border-radius: 25px;
+  width: 100%;
+  max-width: 160px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+.skill-chip:hover {
+  background: #2e8bff;
+  transform: translateY(-4px);
+}
+
+/* Light Mode Chip Fix */
+.skills-container.light .skill-chip {
+  color: #000;
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.25);
+}
+
+.skills-container.light .skill-chip:hover {
+  color: white;
+}
+
+/* ================================
+   Animation
+================================ */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   Responsive Fixes
+================================ */
+@media (max-width: 900px) {
+  .skills-card {
+    padding: 35px;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .skill-chip {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}

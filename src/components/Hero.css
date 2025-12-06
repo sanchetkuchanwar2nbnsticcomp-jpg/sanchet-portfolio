@@ -1,0 +1,160 @@
+/* --------------------
+ FULL SCREEN CONTAINER
+--------------------- */
+.hero-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.hero-container.light {
+  background: url("../assets/light2.jpg") center/cover no-repeat;
+}
+
+.hero-container.dark {
+  background: url("../assets/black2.jpg") center/cover no-repeat;
+}
+
+/* particles */
+#tsparticles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* --------------------
+ GLASS CARD
+--------------------- */
+.hero-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  padding: 55px 45px;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  
+  /* FIX — auto spacing & alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.hero-card.light {
+  background: rgba(255,255,255,0.45);
+  color: #000;
+}
+
+/* --------------------
+ TEXT STYLING
+--------------------- */
+.hero-card h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e8bff;
+}
+
+/* FIX — prevent text breaking */
+.hero-card h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2e8bff;
+  white-space: nowrap;
+}
+
+.hero-card p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* --------------------
+ BUTTONS
+--------------------- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  margin-top: 10px;
+}
+
+.hero-buttons a {
+  padding: 14px 34px;
+  border-radius: 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+/* Primary */
+.primary {
+  background: #2e8bff;
+  color: #fff;
+  box-shadow: 0px 0px 18px rgba(46,139,255,0.35);
+}
+
+.primary:hover {
+  background: #005fe7;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Outline (View CV) */
+.outline {
+  border: 2px solid white;
+  color: white;
+}
+
+.hero-card.light .outline {
+  border-color: #000;
+  color: #000;
+}
+
+.outline:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* --------------------
+ RESPONSIVE FIX
+--------------------- */
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 42px 20px;
+    gap: 16px;
+  }
+
+  .hero-card h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.6rem;
+    white-space: normal; /* allow wrapping on small screens */
+  }
+
+  .hero-card p {
+    font-size: 1.05rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+}

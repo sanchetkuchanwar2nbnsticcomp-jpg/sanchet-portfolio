@@ -1,0 +1,198 @@
+/* ================================
+   ✨ ABOUT SECTION CONTAINER
+================================ */
+.about-container {
+  min-height: calc(var(--vh) * 100);
+  width: 100%;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/light2.jpg");
+}
+
+/* Theme Backgrounds */
+.about-container.dark {
+  background-image: url("../assets/black2.jpg");
+}
+
+.about-container.light {
+  background-image: url("../assets/light2.jpg");
+}
+
+/* ================================
+   📌 MAIN GLASS CARD
+================================ */
+.about-card {
+  display: flex;
+  gap: 45px;
+  max-width: 1100px;
+  width: 92%;
+  padding: 50px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  animation: fadeUp 0.9s ease forwards;
+  opacity: 0;
+  align-items: center;
+}
+
+/* Light Mode Card */
+.about-container.light .about-card {
+  background: rgba(255, 255, 255, 0.42);
+  color: #000;
+}
+
+/* ================================
+   👤 PROFILE IMAGE
+================================ */
+.about-img {
+  width: 380px;
+  height: 380px;
+  border-radius: 30px;
+  object-fit: cover;
+  border: 5px solid #2e8bff55;
+  transition: 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.04);
+  border-color: #2e8bff;
+}
+
+/* ================================
+   📝 TEXT STYLES
+================================ */
+.about-text h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2e8bff;
+}
+
+.about-text h3 {
+  font-size: 1.4rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  color: #2e8bff;
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.about-text span {
+  color: #2e8bff;
+  font-weight: 600;
+}
+
+/* ================================
+   🎓 EDUCATION BOXES
+================================ */
+.education-wrapper {
+  margin-top: 10px;
+  display: grid;
+  gap: 12px;
+}
+
+.education-entry {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: 0.25s ease;
+}
+
+.education-entry:hover {
+  transform: translateY(-3px);
+  border-color: #2e8bff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.degree {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.course,
+.year {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.cgpa {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #2e8bff;
+  font-weight: 600;
+}
+
+/* ================================
+   🔘 CENTER BUTTON
+================================ */
+.about-buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-buttons a {
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 220px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* Primary Button Style */
+.primary {
+  background: #2e8bff;
+  color: white;
+  border: none;
+  box-shadow: 0 0 18px rgba(46, 139, 255, 0.35);
+}
+
+.primary:hover {
+  background: #005fe7;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(46, 139, 255, 0.6);
+}
+
+/* ================================
+   ⏳ ANIMATION
+================================ */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   📱 RESPONSIVE DESIGN
+================================ */
+@media (max-width: 950px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .about-img {
+    width: 260px;
+    height: 260px;
+  }
+}

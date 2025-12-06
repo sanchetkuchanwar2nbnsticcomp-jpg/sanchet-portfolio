@@ -1,0 +1,214 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+/* BACKGROUND PRESETS */
+.bg-light-bg {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url('/bg1.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-dark-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('/bg1.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+
+  /* Remove background blur box */
+  background: none;
+  backdrop-filter: none;
+}
+
+.home-text {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 20px;
+}
+
+
+/* Smoothed Rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ===========================================================
+   GLOBAL VARIABLES
+=========================================================== */
+:root {
+  --bg-image-light: url('/src/assets/light2.jpg');
+  --bg-image-dark: url('/src/assets/black2.jpg');
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+/* ===========================================================
+   LIGHT MODE
+=========================================================== */
+body {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.553),
+      rgba(255, 255, 255, 0.486)
+    ),
+    radial-gradient(circle at 15% 20%, rgba(255, 200, 220, 0.199), transparent 55%),
+    radial-gradient(circle at 85% 25%, rgba(190, 215, 255, 0.221), transparent 60%),
+    radial-gradient(circle at 50% 85%, rgba(255, 235, 165, 0), transparent 70%),
+    var(--bg-image-light);
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #2b2b2b;
+}
+
+/* ===========================================================
+   DARK MODE
+=========================================================== */
+html.dark body {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    radial-gradient(circle at 25% 20%, rgba(120, 90, 220, 0.22), transparent 70%),
+    radial-gradient(circle at 80% 80%, rgba(0, 120, 210, 0.18), transparent 75%),
+    radial-gradient(circle at 50% 50%, rgba(40, 40, 60, 0.35), transparent 80%),
+    var(--bg-image-dark);
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #e9ecf3;
+}
+
+/* ===========================================================
+   GLASS EFFECT
+=========================================================== */
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+html.dark .glass {
+  background: rgba(20, 22, 32, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ===========================================================
+   NAV + AURA
+=========================================================== */
+.nav-item {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: 0.28s;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.aura-text {
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.45),
+    0 0 14px rgba(190, 200, 255, 0.30),
+    0 0 26px rgba(170, 190, 255, 0.18);
+}
+
+html.dark .aura-text {
+  text-shadow:
+    0 0 5px rgba(150, 170, 255, 0.32),
+    0 0 18px rgba(90, 110, 255, 0.28),
+    0 0 34px rgba(70, 90, 200, 0.22);
+}
+
+.glass-box {
+  transition: transform 0.3s ease, background 0.4s ease;
+}
+
+.glass-box:hover {
+  transform: scale(1.02);
+}
+
+.gradient-name {
+  background: linear-gradient(to right, #5146ff, #9b59ff, #ff4da6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/* Fix text vanishing in light mode hover */
+.highlight-tech {
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+html.dark .highlight-tech {
+  color: #a5b4fc;
+}
+
+@keyframes gradientMove {
+  0% { filter: blur(0px); }
+  50% { filter: blur(3px); }
+  100% { filter: blur(0px); }
+}
+
+.animate-gradientBlur {
+  animation: gradientMove 9s ease-in-out infinite;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(120deg, #0f172a, #1e293b, #334155);
+  background-size: 300% 300%;
+  animation: bgMove 15s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
